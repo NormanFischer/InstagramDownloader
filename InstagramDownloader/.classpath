@@ -6,6 +6,6 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/User/eclipse-workspace/InstagramDownloader/lib/jsoup-1.13.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/User/git/repository/InstagramDownloader/lib/jsoup-1.13.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
