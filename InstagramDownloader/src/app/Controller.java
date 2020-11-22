@@ -21,6 +21,7 @@ public class Controller {
 			String miscInput = scan.nextLine();
 			View.downloadVisual(urlInput);
 			if(!ImageDownloader.downloadImage(urlInput, miscInput)) {
+				System.out.println("Error downloading image");
 				continue;
 			}
 			View.success(urlInput, miscInput);
