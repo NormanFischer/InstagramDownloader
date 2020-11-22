@@ -1,5 +1,5 @@
 # InstagramDownloader
-Downloads image from Instagram using JSoup
+Downloads images and videos from Instagram using JSoup
 
 # Current Features
 *Download images and videos from Instagram
