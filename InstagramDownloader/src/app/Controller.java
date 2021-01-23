@@ -1,5 +1,6 @@
 package app;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 import model.ImageDownloader;
@@ -12,7 +13,8 @@ public class Controller {
 		isOpen = true;
 	}
 
-	public void init() {
+	public void init() throws IOException {
+		ImageDownloader id = new ImageDownloader();
 		while(isOpen) {
 			Scanner scan = new Scanner(System.in);
 			View.promptURL();
@@ -20,11 +22,10 @@ public class Controller {
 			View.promptFileName();
 			String miscInput = scan.nextLine();
 			View.downloadVisual(urlInput);
-			if(!ImageDownloader.downloadImage(urlInput, miscInput)) {
-				System.out.println("Error downloading image");
-				continue;
+			id.downloadImage(urlInput, miscInput);
+			if(id.getIsDownloaded()) {
+				View.success(urlInput, miscInput);
 			}
-			View.success(urlInput, miscInput);
 			View.promptDownloadMore();
 			miscInput = scan.nextLine();
 			if(!miscInput.equals("Y")) {
